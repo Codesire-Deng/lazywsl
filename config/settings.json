@@ -1,0 +1,279 @@
+{
+    "editor.suggestSelection": "first",
+    "editor.rulers": [
+        80,
+        120
+    ],
+    "debug.terminal.clearBeforeReusing": true,
+    "diffEditor.maxComputationTime": 3000,
+    "errorLens.removeLinebreaks": false,
+    "editor.guides.bracketPairs": true,
+    "editor.cursorSmoothCaretAnimation": "on",
+    "editor.minimap.enabled": false,
+    "editor.cursorBlinking": "smooth",
+    "editor.linkedEditing": true,
+    "editor.smoothScrolling": true,
+    "editor.unicodeHighlight.allowedLocales": {
+        "zh-hans": true,
+        "zh-hant": true
+    },
+    "editor.accessibilitySupport": "off",
+    "editor.tokenColorCustomizations": {
+        "textMateRules": [
+            {
+                "scope": "keyword.operator.noexcept.cpp",
+                "settings": {
+                    "foreground": "#C678DD"
+                }
+            },
+            {
+                "scope": "keyword.operator.new",
+                "settings": {
+                    "foreground": "#C678DD"
+                }
+            },
+            {
+                "scope": "support.other.attribute.cpp",
+                "settings": {
+                    "fontStyle": "italic"
+                }
+            },
+            {
+                "scope": "keyword.operator.cast",
+                "settings": {
+                    "foreground": "#C678DD"
+                }
+            },
+            {
+                "scope": "keyword.operator.alignof.cpp",
+                "settings": {
+                    "foreground": "#C678DD"
+                }
+            },
+            {
+                "scope": "punctuation.separator.namespace.access",
+                "settings": {
+                    "foreground": "#e5c07bb7",
+                    "fontStyle": "italic"
+                }
+            },
+            {
+                "scope": "markup.other.log.error",
+                "settings": {
+                    "foreground": "#FF0000"
+                }
+            },
+            {
+                "scope": "markup.other.log.warn",
+                "settings": {
+                    "foreground": "#c500f7cc"
+                }
+            },
+            {
+                "scope": "markup.other.log.info",
+                "settings": {
+                    "foreground": "#2cd3c5"
+                }
+            },
+            {
+                "scope": "markup.other.log.debug",
+                "settings": {
+                    "foreground": "#888585"
+                }
+            },
+            {
+                "scope": "markup.other.log.highlight",
+                "settings": {
+                    "foreground": "#19ff04"
+                }
+            }
+        ]
+    },
+    "editor.semanticTokenColorCustomizations": {
+        "rules": {
+            "namespace": {
+                "fontStyle": "italic",
+                "foreground": "#e5c07bb7"
+            },
+            "referenceType": {
+                "fontStyle": "underline"
+            },
+            "newOperator": {
+                "fontStyle": "underline",
+            },
+            "variable.readonly": {
+                "foreground": "#e06c75",
+            },
+            "concept": {
+                "foreground": "#e06c75"
+            }
+        }
+    },
+    "[cpp]": {
+        "editor.language.colorizedBracketPairs": [
+            [
+                "[[",
+                "]]"
+            ],
+            [
+                "{",
+                "}"
+            ],
+            [
+                "(",
+                ")"
+            ],
+            [
+                "[",
+                "]"
+            ],
+        ]
+    },
+    "explorer.sortOrder": "type",
+    "files.autoGuessEncoding": true,
+    "files.associations": {
+        ".clang-format": "yaml",
+        "*.clang-format": "yaml",
+        "*.cu": "cpp",
+        ".clang-tidy": "yaml"
+    },
+    "search.exclude": {
+        "**/build": true
+    },
+    "settingsSync.ignoredSettings": [
+        "projectManager.git.baseFolders",
+        "cmake.cmakePath",
+        "C_Cpp.intelliSenseEngine"
+    ],
+    "files.exclude": {
+        "**/.deploy_git": true
+    },
+    "files.hotExit": "onExitAndWindowClose",
+    "git.openRepositoryInParentFolders": "never",
+    "git.autofetch": true,
+    "git.confirmSync": false,
+    "output.smartScroll.enabled": false,
+    "security.workspace.trust.untrustedFiles": "open",
+    "terminal.integrated.defaultProfile.linux": "zsh",
+    "terminal.integrated.enableMultiLinePasteWarning": false,
+    "terminal.integrated.cursorBlinking": true,
+    "terminal.integrated.commandsToSkipShell": [
+        "cmake.build",
+        "cmake.debugTarget",
+        "cmake.launchTarget",
+        "workbench.view.extension.project-manager",
+        "cmake.configure"
+    ],
+    "terminal.integrated.scrollback": 5000,
+    "terminal.integrated.smoothScrolling": true,
+    "workbench.tree.indent": 20,
+    "workbench.list.smoothScrolling": true,
+    "workbench.startupEditor": "newUntitledFile",
+    "workbench.editor.untitled.hint": "hidden",
+    "workbench.preferredDarkColorTheme": "One Dark Pro",
+    "workbench.colorCustomizations": {
+        "[One Dark Pro]": {
+            "editorBracketHighlight.foreground1": "#abb2bf",
+            "editorBracketHighlight.foreground2": "#8080ff",
+            // "editorBracketHighlight.foreground3": "#f1cb05",
+            "editorBracketHighlight.foreground4": "#61ecb7",
+            // "editorBracketHighlight.foreground5": "#00a560",
+            "editorBracketHighlight.foreground6": "#2fc12c",
+        }
+    },
+    "C_Cpp.default.cppStandard": "c++20",
+    "C_Cpp.default.cStandard": "c17",
+    "C_Cpp.intelliSenseUpdateDelay": 1000,
+    "C_Cpp.autocompleteAddParentheses": true,
+    "C_Cpp.intelliSenseEngine": "disabled",
+    "cmake.configureOnOpen": true,
+    "cmake.configureOnEdit": false,
+    "cmake.generator": "Unix Makefiles",
+    "cmake.configureSettings": {},
+    "cmake.copyCompileCommands": "${workspaceFolder}/compile_commands.json",
+    "C_Cpp.inlayHints.autoDeclarationTypes.showOnLeft": true,
+    "C_Cpp.formatting": "clangFormat",
+    "clangd.arguments": [
+        "--query-driver=g++,clang++,/usr/bin/g++,/usr/sbin/g++",
+        "--background-index",
+        "--clang-tidy",
+        "--completion-parse=always",
+        "--completion-style=detailed",
+        "--function-arg-placeholders=false",
+        "-j",
+        "4",
+        "--pch-storage=memory",
+        "--header-insertion=never",
+        "--enable-config",
+        "-compile-commands-dir=${workspaceFolder}"
+    ],
+    "clangd.checkUpdates": false,
+    "errorLens.gutterIconSet": "defaultOutline",
+    "errorLens.margin": "2ch",
+    "errorLens.statusBarColorsEnabled": true,
+    "errorLens.editorHoverEnabled": false,
+    "errorLens.editorHoverPartsEnabled": {
+        "messageEnabled": true,
+        "buttonsEnabled": false
+    },
+    "gitlens.keymap": "none",
+    "gitlens.gitCommands.skipConfirmations": [
+        "fetch:command",
+        "stash-push:command",
+        "switch:command",
+        "branch-create:command"
+    ],
+    "gitlens.codeLens.recentChange.enabled": false,
+    "gitlens.advanced.fileHistoryFollowsRenames": true,
+    "gitlens.remotes": [
+        {
+            "domain": "gitee.com",
+            "type": "GitHub"
+        }
+    ],
+    "gitlens.codeLens.authors.enabled": false,
+    "gitlens.advanced.messages": {
+        "suppressCreatePullRequestPrompt": true
+    },
+    "makefile.compileCommandsPath": "${workspaceFolder}/compile_commands.json",
+    "projectManager.any.ignoredFolders": [
+        "node_modules",
+        "out",
+        "typings",
+        "test",
+        "build"
+    ],
+    "projectManager.git.ignoredFolders": [
+        "node_modules",
+        "out",
+        "typings",
+        "test",
+        ".haxelib",
+        "build"
+    ],
+    "projectManager.sortList": "Name",
+    "todo-tree.general.tags": [
+        "BUG",
+        "HACK",
+        "FIXME",
+        "TODO",
+        "PERF",
+        "ERROR",
+        "[ ]",
+        "[x]",
+        "NOTE"
+    ],
+    "todo-tree.highlights.backgroundColourScheme": [
+        "red",
+        "orange",
+        "yellow",
+        "green",
+        "#518AFB",
+        "red",
+        "red",
+        "violet",
+        "#4da9ef"
+    ],
+    "todo-tree.regex.regex": "(//|#|<!--|;|/\\*|^|^\\s*(-|\\d+.))\\s*($TAGS)",
+    "todo-tree.highlights.useColourScheme": true,
+}
