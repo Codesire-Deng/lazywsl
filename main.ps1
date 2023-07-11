@@ -8,22 +8,22 @@ $ErrorActionPreference = "Stop"
 $install = "pacman -S --noconfirm --disable-download-timeout"
 
 # 初始化 wsl
-.\Arch.exe
-
-# 初始化 archlinux
-.\Arch.exe
-
-# 确认 wsl 正常
-.\Arch.exe run bash -c "exit"
+.\Arch.exe install
 
 # 初始化 sudoers
-.\Arch.exe run bash -c "cp ./config/sudoers /etc/sudoers" 
+.\Arch.exe run bash -c "cp ./config/sudoers /etc/sudoers && sleep 0.3s" 
 
 # 添加 pacman 清华源
-.\Arch.exe run bash -c "cp ./config/pacman.conf /etc/pacman.conf"
+.\Arch.exe run bash -c "cp ./config/pacman.conf /etc/pacman.conf && sleep 0.3s"
 
 # 更新 keyring 和系统软件
-.\Arch.exe run bash -c "pacman-key --init && pacman-key --populate && pacman -Sy --noconfirm --disable-download-timeout archlinux-keyring archlinuxcn-keyring && pacman -Su --noconfirm --disable-download-timeout"
+.\Arch.exe run bash -c "rm -rf /etc/pacman.d/gnupg && sleep 0.3s && pkill gpg-agent && sleep 0.3s"
+.\Arch.exe run bash -c "pacman-key --init && pacman-key --populate && echo 'key init 1' && sleep 1s"
+.\Arch.exe run bash -c "pacman-key --init && pacman-key --populate && echo 'key init 2' && sleep 1s"
+.\Arch.exe run bash -c "pacman-key --init && pacman-key --populate && echo 'key init 3' && sleep 1s"
+.\Arch.exe run bash -c "pacman -Sy --noconfirm --disable-download-timeout archlinux-keyring"
+.\Arch.exe run bash -c "pacman -Sy --noconfirm --disable-download-timeout archlinuxcn-keyring"
+.\Arch.exe run bash -c "sudo pacman -Syu --noconfirm --disable-download-timeout"
 
 # [必要] 安装 zsh git which wget
 .\Arch.exe run bash -c "$install zsh git which wget zsh-syntax-highlighting"
