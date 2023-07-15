@@ -13,14 +13,8 @@ $install = "pacman -S --noconfirm --disable-download-timeout"
 # 初始化 sudoers 和 keyring
 .\Arch.exe run bash ./config/keyring_install.sh
 
-# [必要] 安装 zsh git ssh which wget
-.\Arch.exe run bash -c "$install zsh git openssh which wget zsh-syntax-highlighting"
-
-# [非常建议] 安装 yay gcc clang cmake bear 
-.\Arch.exe run bash -c "$install yay gcc clang-git cmake make bear"
-
-# [建议] 其他开发工具
-.\Arch.exe run bash -c "$install gdb python ninja man-db man-pages openssh linux-headers boost cloc perf neofetch"
+# 安装开发工具
+.\Arch.exe run bash ./config/toolset_install.sh
 
 # 添加 user
 .\Arch.exe run bash -c "useradd -m -G wheel -s `$(which zsh) $username"
