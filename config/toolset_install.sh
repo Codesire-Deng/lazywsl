@@ -1,8 +1,12 @@
 #!bash
 
+echo "toolset_install..."
+
 function inst {
     pacman -S --noconfirm --disable-download-timeout $@
 }
+
+sync
 
 # [必要] 安装 zsh git ssh which wget
 inst zsh git openssh which wget

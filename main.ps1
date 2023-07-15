@@ -13,8 +13,12 @@ $install = "pacman -S --noconfirm --disable-download-timeout"
 # 初始化 sudoers 和 keyring
 .\Arch.exe run bash ./config/keyring_install.sh
 
-# 安装开发工具
+echo "devtools:"
+
+# 安装 devtools
 .\Arch.exe run bash ./config/toolset_install.sh
+
+echo "useradd:"
 
 # 添加 user
 .\Arch.exe run bash -c "useradd -m -G wheel -s `$(which zsh) $username"

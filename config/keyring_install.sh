@@ -31,3 +31,4 @@ while true; do
 done
 
 pacman -Syu --noconfirm --disable-download-timeout
+sleep 5s
