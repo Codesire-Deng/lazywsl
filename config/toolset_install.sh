@@ -1,12 +1,14 @@
 #!bash
 
-alias ins="pacman -S --noconfirm --disable-download-timeout"
+function inst {
+    pacman -S --noconfirm --disable-download-timeout $@
+}
 
 # [必要] 安装 zsh git ssh which wget
-ins zsh git openssh which wget zsh-syntax-highlighting
+inst zsh git openssh which wget
 
 # [非常建议] 安装 yay gcc gdb clang cmake bear 
-ins yay gcc gdb clang-git cmake make bear 
+inst yay gcc gdb clang-git cmake make bear
 
 # [建议] 其他开发工具
-ins python ninja man-db man-pages openssh linux-headers boost cloc perf neofetch
+inst python ninja man-db man-pages openssh linux-headers zsh-syntax-highlighting boost cloc perf neofetch
