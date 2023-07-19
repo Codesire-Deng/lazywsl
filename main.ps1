@@ -10,6 +10,10 @@ $install = "pacman -S --noconfirm --disable-download-timeout"
 # 初始化 wsl
 .\Arch.exe install
 
+if ($LASTEXITCODE -ne 0) {
+    exit $LASTEXITCODE
+}
+
 # 初始化 sudoers 和 keyring
 .\Arch.exe run bash ./config/keyring_install.sh
 
